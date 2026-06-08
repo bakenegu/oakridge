@@ -7,7 +7,7 @@ export default function InTheDetails() {
     <section className="relative w-full" style={{ minHeight: "420px" }}>
       <Image
         src={IMAGES.diningRoom}
-        alt="Elegant dining room at Evergreen Living"
+        alt="Elegant dining room at Oakridge Manor Living"
         fill
         className="object-cover"
         sizes="100vw"

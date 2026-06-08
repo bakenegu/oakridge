@@ -7,7 +7,7 @@ export default function AssistedLivingBanner() {
     <section className="relative w-full" style={{ minHeight: "320px" }}>
       <Image
         src={IMAGES.breakfastNook}
-        alt="Bright and welcoming dining space at Evergreen Living"
+        alt="Bright and welcoming dining space at Oakridge Manor Living"
         fill
         className="object-cover"
         sizes="100vw"

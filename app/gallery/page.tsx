@@ -4,7 +4,7 @@ import PageHeader from "../components/PageHeader";
 import { IMAGES } from "../lib/images";
 
 const photos = [
-  { src: IMAGES.houseExterior, alt: "Evergreen Living exterior at sunset", category: "Exterior", caption: "Our beautiful community at dusk" },
+  { src: IMAGES.houseExterior, alt: "Oakridge Manor Living exterior at sunset", category: "Exterior", caption: "Our beautiful community at dusk" },
   { src: IMAGES.houseEntrance, alt: "Grand entrance with arched doorway", category: "Exterior", caption: "The welcoming front entrance" },
   { src: IMAGES.diningRoom, alt: "Formal dining room", category: "Interior", caption: "Elegant formal dining room" },
   { src: IMAGES.breakfastNook, alt: "Bright breakfast nook", category: "Interior", caption: "Bright, casual dining nook" },
@@ -24,14 +24,14 @@ export default function GalleryPage() {
             className="text-3xl md:text-4xl font-semibold mb-4"
             style={{ fontFamily: "var(--font-playfair), Georgia, serif", color: "var(--navy)" }}
           >
-            See Evergreen Living for Yourself
+            See Oakridge Manor Living for Yourself
           </h2>
           <p
             className="text-base leading-relaxed"
             style={{ fontFamily: "var(--font-open-sans), Arial, sans-serif", color: "var(--text-medium)" }}
           >
             Browse our photo gallery to get a feel for the warm, beautifully appointed spaces and
-            vibrant community life that await you at Evergreen Living.
+            vibrant community life that await you at Oakridge Manor Living.
           </p>
         </div>
 
@@ -67,7 +67,7 @@ export default function GalleryPage() {
         </h2>
         <p className="text-white/70 mb-8 max-w-xl mx-auto text-sm" style={{ fontFamily: "var(--font-open-sans), Arial, sans-serif" }}>
           Photos only tell part of the story. Come see the warmth, the people, and the lifestyle that
-          make Evergreen Living truly exceptional.
+          make Oakridge Manor Living truly exceptional.
         </p>
         <Link href="/contact" className="btn-gold">Schedule a Tour</Link>
       </section>

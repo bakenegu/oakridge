@@ -23,7 +23,7 @@ export default function ExperienceBetter() {
             color: "var(--text-medium)",
           }}
         >
-          Evergreen Living invites you to embrace your next chapter and live well
+          Oakridge Manor Living invites you to embrace your next chapter and live well
           like never before in our warm, welcoming assisted living community. We
           offer Assisted Living for residents who want to focus on the things
           that matter most in life.

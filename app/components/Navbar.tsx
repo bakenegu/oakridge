@@ -59,7 +59,7 @@ export default function Navbar() {
               className="font-serif text-xl font-semibold leading-tight text-white tracking-wide"
               style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
             >
-              Evergreen
+              Oakridge Manor
             </div>
             <div className="text-[10px] uppercase tracking-[0.2em] text-white/60 font-light">
               Living

@@ -60,7 +60,7 @@ export default function Footer() {
                   className="text-white text-lg font-semibold leading-tight"
                   style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
                 >
-                  Evergreen
+                  Oakridge Manor
                 </div>
                 <div className="text-[10px] uppercase tracking-[0.2em] text-white/50">
                   Living
@@ -138,14 +138,14 @@ export default function Footer() {
             className="text-white/40 text-xs"
             style={{ fontFamily: "var(--font-open-sans), Arial, sans-serif" }}
           >
-            &copy; {new Date().getFullYear()} Evergreen Living. All rights
+            &copy; {new Date().getFullYear()} Oakridge Manor Living. All rights
             reserved.
           </p>
           <p
             className="text-white/40 text-xs italic"
             style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
           >
-            Live Well. Live Evergreen.
+            Live Well. Live Oakridge.
           </p>
         </div>
       </div>

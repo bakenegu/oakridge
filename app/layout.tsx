@@ -17,9 +17,9 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Evergreen Living | Assisted Living in Plano, TX",
+  title: "Oakridge Manor Living | Assisted Living in Plano, TX",
   description:
-    "Evergreen Living offers thoughtfully designed assisted living at 2421 London Dr, Plano, TX. Warm-hearted care, vibrant community life, and beautiful surroundings. Schedule a tour today.",
+    "Oakridge Manor Living offers thoughtfully designed assisted living at 2421 London Dr, Plano, TX. Warm-hearted care, vibrant community life, and beautiful surroundings. Schedule a tour today.",
 };
 
 export default function RootLayout({

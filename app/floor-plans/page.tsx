@@ -69,7 +69,7 @@ export default function FloorPlansPage() {
             className="text-base leading-relaxed"
             style={{ fontFamily: "var(--font-open-sans), Arial, sans-serif", color: "var(--text-medium)" }}
           >
-            Every residence at Evergreen Living is thoughtfully designed with upscale finishes,
+            Every residence at Oakridge Manor Living is thoughtfully designed with upscale finishes,
             abundant natural light, and all the comforts of home. Choose the floor plan that fits
             your lifestyle.
           </p>

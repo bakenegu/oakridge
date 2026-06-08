@@ -76,7 +76,7 @@ export default function ServicesPage() {
             className="text-base leading-relaxed"
             style={{ fontFamily: "var(--font-open-sans), Arial, sans-serif", color: "var(--text-medium)" }}
           >
-            At Evergreen Living, every service and amenity is designed to support your independence,
+            At Oakridge Manor Living, every service and amenity is designed to support your independence,
             comfort, and joy. From world-class dining to enriching social programs, we take care of
             the details so you can focus on living.
           </p>
@@ -133,7 +133,7 @@ export default function ServicesPage() {
           Experience It for Yourself
         </h2>
         <p className="text-white/70 mb-8 max-w-xl mx-auto text-sm" style={{ fontFamily: "var(--font-open-sans), Arial, sans-serif" }}>
-          The best way to understand everything Evergreen Living offers is to come see it in person.
+          The best way to understand everything Oakridge Manor Living offers is to come see it in person.
         </p>
         <Link href="/contact" className="btn-gold">Schedule a Tour</Link>
       </section>

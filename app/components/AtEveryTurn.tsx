@@ -9,7 +9,7 @@ export default function AtEveryTurn() {
         <div className="relative" style={{ minHeight: "480px" }}>
           <Image
             src={IMAGES.livingRoom}
-            alt="Spacious living room with fireplace at Evergreen Living"
+            alt="Spacious living room with fireplace at Oakridge Manor Living"
             fill
             className="object-cover"
             sizes="(max-width: 1024px) 100vw, 50vw"
@@ -38,7 +38,7 @@ export default function AtEveryTurn() {
             Our spacious studio, one, and two bedroom residences are dressed to
             impress — featuring soaring ceilings, hardwood floors, cozy
             fireplaces, and built-in shelving. We have the perfect space that
-            speaks to you at Evergreen Living. Each home is thoughtfully
+            speaks to you at Oakridge Manor Living. Each home is thoughtfully
             appointed so every day feels like a retreat.
           </p>
           <div>

@@ -95,7 +95,7 @@ export default function ForCulturedLiving() {
             From community cookouts, outdoor activities, and stellar services —
             it&apos;s all here to promote outstanding experiences and create
             meaningful moments. Find joy in living life to the fullest at
-            Evergreen Living.
+            Oakridge Manor Living.
           </p>
         </div>
 

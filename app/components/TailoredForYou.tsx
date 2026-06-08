@@ -7,7 +7,7 @@ export default function TailoredForYou() {
     <section className="relative w-full" style={{ minHeight: "420px" }}>
       <Image
         src={IMAGES.houseEntrance}
-        alt="Welcoming entrance of Evergreen Living"
+        alt="Welcoming entrance of Oakridge Manor Living"
         fill
         className="object-cover"
         sizes="100vw"

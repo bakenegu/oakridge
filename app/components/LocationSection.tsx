@@ -32,7 +32,7 @@ export default function LocationSection() {
             className="text-base leading-relaxed mb-4"
             style={{ fontFamily: "var(--font-open-sans), Arial, sans-serif", color: "var(--text-medium)" }}
           >
-            Evergreen Living offers assisted living services to residents and families in
+            Oakridge Manor Living offers assisted living services to residents and families in
             Plano and the surrounding areas. Residents enjoy an engaging environment that
             promotes well-being and relaxation near some of the best that North Texas has to offer.
           </p>
@@ -53,7 +53,7 @@ export default function LocationSection() {
         {/* Google Maps embed */}
         <div className="overflow-hidden rounded shadow-sm" style={{ height: "420px" }}>
           <iframe
-            title="Evergreen Living location map"
+            title="Oakridge Manor Living location map"
             src="https://maps.google.com/maps?q=2421+London+Dr,+Plano,+TX+75025&t=&z=15&ie=UTF8&iwloc=&output=embed"
             width="100%"
             height="100%"

@@ -49,7 +49,7 @@ const options = [
   {
     title: "Respite Care",
     description:
-      "Short-term stays at Evergreen Living give family caregivers a well-deserved break while ensuring their loved one receives exceptional care in a warm, welcoming setting. All the comforts of our community — available by the day or week.",
+      "Short-term stays at Oakridge Manor Living give family caregivers a well-deserved break while ensuring their loved one receives exceptional care in a warm, welcoming setting. All the comforts of our community — available by the day or week.",
     features: [
       "Short-term stays available",
       "Full access to all amenities",
@@ -80,7 +80,7 @@ export default function LivingOptionsPage() {
             className="text-base leading-relaxed"
             style={{ fontFamily: "var(--font-open-sans), Arial, sans-serif", color: "var(--text-medium)" }}
           >
-            At Evergreen Living, we believe every resident deserves a lifestyle tailored to their unique
+            At Oakridge Manor Living, we believe every resident deserves a lifestyle tailored to their unique
             needs. Whether you or your loved one needs light assistance, specialized memory care, or
             simply a vibrant community, we have a home for you.
           </p>

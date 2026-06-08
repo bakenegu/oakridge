@@ -7,7 +7,7 @@ export default function Hero() {
     <section className="relative w-full" style={{ minHeight: "90vh" }}>
       <Image
         src={IMAGES.houseExterior}
-        alt="Evergreen Living community exterior at sunset"
+        alt="Oakridge Manor Living community exterior at sunset"
         fill
         priority
         className="object-cover"
@@ -52,7 +52,7 @@ export default function Hero() {
           className="text-white text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-6 max-w-3xl"
           style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
         >
-          Evergreen Living{" "}
+          Oakridge Manor Living{" "}
           <span style={{ color: "var(--gold-light)" }}>Feels Like Home</span>
         </h1>
         <button
@@ -77,7 +77,7 @@ export default function Hero() {
             className="text-white text-sm"
             style={{ fontFamily: "var(--font-open-sans), Arial, sans-serif" }}
           >
-            Ready to experience the Evergreen difference?
+            Ready to experience the Oakridge Manor difference?
           </p>
           <Link href="/contact" className="btn-primary">
             Schedule a Tour Today
