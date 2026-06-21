@@ -31,6 +31,9 @@ export default function Navbar() {
         </a>
       </div>
 
+      {/* Gold accent bar */}
+      <div className="w-full h-[3px]" style={{ backgroundColor: "var(--gold)" }} />
+
       {/* Main nav */}
       <nav className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
         {/* Logo */}
@@ -38,8 +41,8 @@ export default function Navbar() {
           <Image
             src="/LOGO1.png"
             alt="Oakridge Manor Assisted Living"
-            width={160}
-            height={72}
+            width={210}
+            height={95}
             style={{ objectFit: "contain", objectPosition: "left center" }}
             priority
           />
