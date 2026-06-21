@@ -41,8 +41,8 @@ export default function Navbar() {
           <Image
             src="/LOGO1.png"
             alt="Oakridge Manor Assisted Living"
-            width={180}
-            height={60}
+            width={160}
+            height={44}
             style={{ objectFit: "contain", objectPosition: "left center" }}
             priority
           />
