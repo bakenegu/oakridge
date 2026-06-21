@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -31,38 +32,17 @@ export default function Navbar() {
       </div>
 
       {/* Main nav */}
-      <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <nav className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3 group">
-          <div
-            className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0"
-            style={{ backgroundColor: "var(--gold)" }}
-          >
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="white"
-              strokeWidth="1.8"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
-              <polyline points="9 22 9 12 15 12 15 22" />
-            </svg>
-          </div>
-          <div>
-            <div
-              className="font-serif text-xl font-semibold leading-tight text-white tracking-wide"
-              style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
-            >
-              Oakridge Manor
-            </div>
-            <div className="text-[10px] uppercase tracking-[0.2em] text-white/60 font-light">
-              Living
-            </div>
-          </div>
+        <Link href="/" className="flex-shrink-0">
+          <Image
+            src="/LOGO1.png"
+            alt="Oakridge Manor Assisted Living"
+            width={160}
+            height={72}
+            style={{ objectFit: "contain", objectPosition: "left center" }}
+            priority
+          />
         </Link>
 
         {/* Desktop nav */}
