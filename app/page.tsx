@@ -1,10 +1,7 @@
 import Hero from "./components/Hero";
 import ExperienceBetter from "./components/ExperienceBetter";
-import TailoredForYou from "./components/TailoredForYou";
+import CarePillars from "./components/CarePillars";
 import AssistedLivingBanner from "./components/AssistedLivingBanner";
-import AtEveryTurn from "./components/AtEveryTurn";
-import InTheDetails from "./components/InTheDetails";
-import ForCulturedLiving from "./components/ForCulturedLiving";
 import LocationSection from "./components/LocationSection";
 
 export default function Home() {
@@ -12,11 +9,8 @@ export default function Home() {
     <>
       <Hero />
       <ExperienceBetter />
-      <TailoredForYou />
+      <CarePillars />
       <AssistedLivingBanner />
-      <AtEveryTurn />
-      <InTheDetails />
-      <ForCulturedLiving />
       <LocationSection />
     </>
   );

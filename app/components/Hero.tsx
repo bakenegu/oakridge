@@ -7,7 +7,7 @@ export default function Hero() {
     <section className="relative w-full" style={{ minHeight: "90vh" }}>
       <Image
         src={IMAGES.houseExterior}
-        alt="Oakridge Manor Living community exterior at sunset"
+        alt="Oakridge Manor Living — residential care home exterior in Plano, TX"
         fill
         priority
         className="object-cover"
@@ -33,7 +33,7 @@ export default function Hero() {
             className="text-white text-xs uppercase tracking-[0.25em] font-semibold"
             style={{ fontFamily: "var(--font-open-sans), Arial, sans-serif" }}
           >
-            Award-Winning Senior Community
+            Nurse-Led Residential Care Home — Plano, TX
           </span>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--gold)">
             <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
@@ -46,41 +46,48 @@ export default function Hero() {
           className="text-white/80 text-sm uppercase tracking-[0.3em] font-semibold mb-4"
           style={{ fontFamily: "var(--font-open-sans), Arial, sans-serif" }}
         >
-          Finding Comfort &amp; Community
+          Type B Assisted Living · 24/7 Hands-On Care
         </p>
         <h1
           className="text-white text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-6 max-w-3xl"
           style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
         >
-          Oakridge Manor Living{" "}
+          Where Clinical Care{" "}
           <span style={{ color: "var(--gold-light)" }}>Feels Like Home</span>
         </h1>
-        <button
-          aria-label="Watch community video"
-          className="mt-4 w-16 h-16 rounded-full border-2 border-white flex items-center justify-center hover:bg-white/20 transition-colors"
+        <p
+          className="text-white/80 text-base md:text-lg max-w-xl mb-10 leading-relaxed"
+          style={{ fontFamily: "var(--font-open-sans), Arial, sans-serif" }}
         >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="white" className="ml-1">
-            <polygon points="5 3 19 12 5 21 5 3" />
-          </svg>
-        </button>
-        <p className="text-white/60 text-xs uppercase tracking-widest mt-2">
-          Watch Our Story
+          A premium, nurse-led residential care home offering personalized 24/7 support in a warm, private-home setting — not a facility.
         </p>
+        <div className="flex flex-col sm:flex-row gap-4 items-center">
+          <Link href="/contact" className="btn-gold">
+            Schedule a Private Tour
+          </Link>
+          <a
+            href="tel:+15125550100"
+            className="text-white/90 text-sm font-semibold uppercase tracking-widest hover:text-white transition-colors"
+            style={{ fontFamily: "var(--font-open-sans), Arial, sans-serif" }}
+          >
+            Call (512) 555-0100
+          </a>
+        </div>
       </div>
 
       <div className="absolute bottom-0 left-0 right-0">
         <div
-          className="max-w-7xl mx-auto px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-4"
-          style={{ backgroundColor: "rgba(27, 42, 74, 0.9)" }}
+          className="max-w-7xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-4"
+          style={{ backgroundColor: "rgba(27, 42, 74, 0.92)" }}
         >
           <p
             className="text-white text-sm"
             style={{ fontFamily: "var(--font-open-sans), Arial, sans-serif" }}
           >
-            Ready to experience the Oakridge Manor difference?
+            Limited rooms available — families in Plano and DFW trust Oakridge Manor Living.
           </p>
           <Link href="/contact" className="btn-primary">
-            Schedule a Tour Today
+            Reserve a Room Today
           </Link>
         </div>
       </div>

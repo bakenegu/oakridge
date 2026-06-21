@@ -5,11 +5,9 @@ import Link from "next/link";
 
 const navLinks = [
   { label: "Home", href: "/" },
-  { label: "Living Options", href: "/living-options" },
-  { label: "Floor Plans", href: "/floor-plans" },
-  { label: "Photo Gallery", href: "/gallery" },
-  { label: "Services & Amenities", href: "/services" },
-  { label: "Blog", href: "/blog" },
+  { label: "About", href: "/about" },
+  { label: "Services", href: "/services" },
+  { label: "Gallery", href: "/gallery" },
   { label: "Contact Us", href: "/contact" },
 ];
 
@@ -20,14 +18,21 @@ export default function Navbar() {
     <header className="w-full" style={{ backgroundColor: "var(--navy)" }}>
       {/* Top utility bar */}
       <div
-        className="w-full py-2 px-6 flex justify-end text-xs"
+        className="w-full py-2 px-6 flex justify-between items-center text-xs"
         style={{ backgroundColor: "var(--navy-light)" }}
       >
         <a
-          href="#"
+          href="tel:+15125550100"
+          className="text-white/70 hover:text-white transition-colors text-[11px] font-semibold"
+          style={{ fontFamily: "var(--font-open-sans), Arial, sans-serif" }}
+        >
+          (512) 555-0100
+        </a>
+        <a
+          href="/contact"
           className="text-white/70 hover:text-white transition-colors uppercase tracking-widest font-semibold text-[10px]"
         >
-          Community Member Login
+          Schedule a Private Tour
         </a>
       </div>
 
@@ -49,9 +54,8 @@ export default function Navbar() {
               strokeLinecap="round"
               strokeLinejoin="round"
             >
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" />
-              <path d="M12 6c0 3-2 5-2 8h4c0-3-2-5-2-8z" />
-              <path d="M9 18h6" />
+              <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+              <polyline points="9 22 9 12 15 12 15 22" />
             </svg>
           </div>
           <div>
@@ -68,7 +72,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop nav */}
-        <ul className="hidden lg:flex items-center gap-6">
+        <ul className="hidden lg:flex items-center gap-7">
           {navLinks.map((link) => (
             <li key={link.href}>
               <Link
@@ -80,6 +84,15 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
+
+        {/* Desktop CTA */}
+        <Link
+          href="/contact"
+          className="btn-gold hidden lg:inline-block"
+          style={{ padding: "0.6rem 1.5rem", fontSize: "0.7rem" }}
+        >
+          Book a Tour
+        </Link>
 
         {/* Mobile hamburger */}
         <button
@@ -127,6 +140,9 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
+          <Link href="/contact" className="btn-gold text-center mt-2" onClick={() => setMenuOpen(false)}>
+            Book a Tour
+          </Link>
         </div>
       )}
     </header>

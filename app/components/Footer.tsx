@@ -1,27 +1,21 @@
 import Link from "next/link";
 
 const footerLinks = {
-  "Living Options": [
-    { label: "Assisted Living", href: "/living-options" },
-    { label: "Memory Care", href: "/living-options/memory-care" },
-    { label: "Independent Living", href: "/living-options/independent" },
-    { label: "Respite Care", href: "/living-options/respite" },
+  "Our Care": [
+    { label: "24/7 Personalized Care", href: "/services" },
+    { label: "Meal Services", href: "/services" },
+    { label: "Safety & Security", href: "/services" },
+    { label: "Comfort of Home", href: "/services" },
   ],
-  "Our Community": [
+  "About Us": [
+    { label: "Our Story", href: "/about" },
+    { label: "Care Leadership", href: "/about" },
     { label: "Photo Gallery", href: "/gallery" },
-    { label: "Floor Plans", href: "/floor-plans" },
-    { label: "Dining", href: "/services#dining" },
-    { label: "Activities", href: "/services#activities" },
-  ],
-  "Services & Amenities": [
-    { label: "Wellness Programs", href: "/services" },
-    { label: "Transportation", href: "/services#transportation" },
-    { label: "Housekeeping", href: "/services#housekeeping" },
-    { label: "24/7 Care", href: "/services#care" },
+    { label: "Contact Us", href: "/contact" },
   ],
   Connect: [
-    { label: "Contact Us", href: "/contact" },
-    { label: "Blog", href: "/blog" },
+    { label: "Schedule a Tour", href: "/contact" },
+    { label: "Call (512) 555-0100", href: "tel:+15125550100" },
     { label: "Careers", href: "/careers" },
     { label: "Privacy Policy", href: "/privacy" },
   ],
