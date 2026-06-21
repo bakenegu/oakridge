@@ -35,14 +35,14 @@ export default function Navbar() {
       <div className="w-full h-[3px]" style={{ backgroundColor: "var(--gold)" }} />
 
       {/* Main nav */}
-      <nav className="max-w-7xl mx-auto px-6 flex items-center justify-between" style={{ paddingTop: "2px", paddingBottom: "2px" }}>
+      <nav className="max-w-7xl mx-auto px-6 flex items-center justify-between" style={{ paddingTop: "0", paddingBottom: "0" }}>
         {/* Logo */}
         <Link href="/" className="flex-shrink-0">
           <Image
             src="/LOGO1.png"
             alt="Oakridge Manor Assisted Living"
-            width={210}
-            height={95}
+            width={180}
+            height={60}
             style={{ objectFit: "contain", objectPosition: "left center" }}
             priority
           />
