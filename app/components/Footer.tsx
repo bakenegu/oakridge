@@ -62,6 +62,13 @@ export default function Footer() {
               </div>
             </div>
 
+            <p
+              className="text-white/60 text-sm leading-relaxed mb-5"
+              style={{ fontFamily: "var(--font-open-sans), Arial, sans-serif" }}
+            >
+              A licensed Type B assisted living facility in Plano, TX. Nurse-led, 24/7 hands-on care for residents with higher-acuity needs — in a warm, residential home setting.
+            </p>
+
             <address
               className="not-italic"
               style={{
