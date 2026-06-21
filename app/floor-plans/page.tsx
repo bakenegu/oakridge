@@ -144,7 +144,7 @@ export default function FloorPlansPage() {
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
             {[
               "All utilities","Weekly housekeeping","Linen service","Wi-Fi included",
-              "Cable TV","24/7 emergency call","Scheduled transport","Concierge services",
+              "Cable TV","24/7 emergency call","Transportation coordination","Concierge services",
               "Fitness center access","Common area access","Maintenance-free living","Parking available",
             ].map((item) => (
               <div

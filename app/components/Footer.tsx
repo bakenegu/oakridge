@@ -62,17 +62,6 @@ export default function Footer() {
               </div>
             </div>
 
-            <p
-              className="text-white/60 text-sm leading-relaxed mb-5"
-              style={{
-                fontFamily: "var(--font-open-sans), Arial, sans-serif",
-              }}
-            >
-              Experience exceptional assisted living in a warm, vibrant
-              community. Our elegantly modern spaces and dedicated team help
-              residents live every day well.
-            </p>
-
             <address
               className="not-italic"
               style={{
@@ -103,7 +92,7 @@ export default function Footer() {
               </h4>
               <ul className="flex flex-col gap-3">
                 {links.map((link) => (
-                  <li key={link.href}>
+                  <li key={link.label}>
                     <Link
                       href={link.href}
                       className="text-white/55 hover:text-white text-sm transition-colors"
