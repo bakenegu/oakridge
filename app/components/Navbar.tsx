@@ -35,7 +35,7 @@ export default function Navbar() {
       <div className="w-full h-[3px]" style={{ backgroundColor: "var(--gold)" }} />
 
       {/* Main nav */}
-      <nav className="max-w-7xl mx-auto px-6 py-1 flex items-center justify-between">
+      <nav className="max-w-7xl mx-auto px-6 flex items-center justify-between" style={{ paddingTop: "2px", paddingBottom: "2px" }}>
         {/* Logo */}
         <Link href="/" className="flex-shrink-0">
           <Image
