@@ -18,7 +18,7 @@ export default function Navbar() {
     <header className="w-full" style={{ backgroundColor: "var(--navy)" }}>
       {/* Top utility bar */}
       <div
-        className="w-full py-2 px-6 flex justify-between items-center text-xs"
+        className="w-full py-2 px-6 flex justify-start items-center text-xs"
         style={{ backgroundColor: "var(--navy-light)" }}
       >
         <a
@@ -27,12 +27,6 @@ export default function Navbar() {
           style={{ fontFamily: "var(--font-open-sans), Arial, sans-serif" }}
         >
           (512) 555-0100
-        </a>
-        <a
-          href="/contact"
-          className="text-white/70 hover:text-white transition-colors uppercase tracking-widest font-semibold text-[10px]"
-        >
-          Schedule a Private Tour
         </a>
       </div>
 
@@ -85,15 +79,6 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* Desktop CTA */}
-        <Link
-          href="/contact"
-          className="btn-gold hidden lg:inline-block"
-          style={{ padding: "0.6rem 1.5rem", fontSize: "0.7rem" }}
-        >
-          Book a Tour
-        </Link>
-
         {/* Mobile hamburger */}
         <button
           className="lg:hidden text-white p-2"
@@ -140,9 +125,6 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
-          <Link href="/contact" className="btn-gold text-center mt-2" onClick={() => setMenuOpen(false)}>
-            Book a Tour
-          </Link>
         </div>
       )}
     </header>
