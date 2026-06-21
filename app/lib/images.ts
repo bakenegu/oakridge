@@ -5,4 +5,5 @@ export const IMAGES = {
   breakfastNook: "/images/breakfast-nook.png",
   livingRoom: "/images/living-room.png",
   bedroom: "/images/bedroom.png",
+  commonArea: "/imgtwo.png",
 };

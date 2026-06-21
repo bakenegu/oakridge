@@ -4,12 +4,14 @@ import PageHeader from "../components/PageHeader";
 import { IMAGES } from "../lib/images";
 
 const photos = [
-  { src: IMAGES.houseExterior, alt: "Oakridge Manor Living exterior at sunset", category: "Exterior", caption: "Our beautiful community at dusk" },
-  { src: IMAGES.houseEntrance, alt: "Grand entrance with arched doorway", category: "Exterior", caption: "The welcoming front entrance" },
-  { src: IMAGES.diningRoom, alt: "Formal dining room", category: "Interior", caption: "Elegant formal dining room" },
-  { src: IMAGES.breakfastNook, alt: "Bright breakfast nook", category: "Interior", caption: "Bright, casual dining nook" },
-  { src: IMAGES.livingRoom, alt: "Spacious living room with fireplace", category: "Interior", caption: "Living room with gas fireplace & built-ins" },
-  { src: IMAGES.houseExterior, alt: "Lush landscaping and lawn", category: "Exterior", caption: "Meticulously maintained grounds" },
+  { src: IMAGES.houseExterior, alt: "Oakridge Manor Living exterior at sunset", category: "Exterior", caption: "Our beautiful home at dusk" },
+  { src: IMAGES.houseEntrance, alt: "Grand entrance with arched doorway", category: "Front Entrance", caption: "The welcoming front entrance" },
+  { src: IMAGES.commonArea, alt: "Spacious common living area with fireplace and built-in shelving", category: "Common Area", caption: "Bright, open common area with fireplace & built-ins" },
+  { src: IMAGES.diningRoom, alt: "Formal dining room", category: "Dining Room", caption: "Elegant formal dining room" },
+  { src: IMAGES.breakfastNook, alt: "Bright breakfast nook", category: "Kitchen & Dining", caption: "Bright, casual dining nook" },
+  { src: IMAGES.livingRoom, alt: "Cozy living room with fireplace", category: "Living Room", caption: "Cozy living room with warm fireplace" },
+  { src: IMAGES.bedroom, alt: "Private resident bedroom", category: "Private Room", caption: "Spacious private resident room" },
+  { src: IMAGES.houseExterior, alt: "Lush landscaping and lawn", category: "Grounds", caption: "Meticulously maintained grounds" },
 ];
 
 export default function GalleryPage() {
