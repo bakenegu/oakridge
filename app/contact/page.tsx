@@ -139,6 +139,49 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      {/* FAQ */}
+      <section className="py-16 px-6" style={{ backgroundColor: "var(--off-white)" }}>
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-12">
+            <p className="section-badge mb-4">FAQ</p>
+            <h2
+              className="text-3xl font-semibold"
+              style={{ fontFamily: "var(--font-playfair), Georgia, serif", color: "var(--navy)" }}
+            >
+              Frequently Asked Questions
+            </h2>
+          </div>
+          <div className="flex flex-col gap-6">
+            {[
+              { q: "What is assisted living?", a: "Assisted living provides housing, meals, personal care, and support for seniors who need assistance with daily activities while maintaining as much independence as possible." },
+              { q: "Is staff available around the clock?", a: "Yes. Our trained caregivers are available 24 hours a day, seven days a week to provide support whenever residents need assistance." },
+              { q: "What services are included?", a: "Services include assistance with daily living activities, medication management, housekeeping, laundry, nutritious meals, wellness programs, and recreational activities." },
+              { q: "Can residents decorate their rooms?", a: "Absolutely. Residents are encouraged to personalize their living spaces with their own furniture, photographs, and treasured belongings to make their new home comfortable and familiar." },
+              { q: "Are family members welcome to visit?", a: "Yes. We encourage family involvement and welcome visits, helping residents maintain meaningful relationships with the people who matter most." },
+            ].map((faq) => (
+              <div
+                key={faq.q}
+                className="bg-white p-6 rounded"
+                style={{ borderLeft: "3px solid var(--gold)" }}
+              >
+                <h3
+                  className="text-base font-semibold mb-2"
+                  style={{ fontFamily: "var(--font-playfair), Georgia, serif", color: "var(--navy)" }}
+                >
+                  {faq.q}
+                </h3>
+                <p
+                  className="text-sm leading-relaxed"
+                  style={{ fontFamily: "var(--font-open-sans), Arial, sans-serif", color: "var(--text-medium)" }}
+                >
+                  {faq.a}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   );
 }

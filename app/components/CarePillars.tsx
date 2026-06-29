@@ -2,10 +2,8 @@ import Link from "next/link";
 
 const pillars = [
   {
-    number: "01",
     title: "Personalized Care",
-    subtitle: "24/7 Hands-On Care",
-    desc: "Our trained caregivers are on-site around the clock — every hour of every day. We provide hands-on assistance with bathing, dressing, eating, toileting, and mobility, ensuring each resident's individual needs are met with dignity, warmth, and skill.",
+    desc: "Every resident receives an individualized care plan tailored to their health, daily routines, and personal preferences.",
     icon: (
       <svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
         <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
@@ -13,10 +11,30 @@ const pillars = [
     ),
   },
   {
-    number: "02",
-    title: "Meal Services",
-    subtitle: "Nutritious & Flavorful Dining",
-    desc: "Every meal is thoughtfully prepared to be nutritious, flavorful, and tailored to individual dietary needs — including diabetic, low-sodium, and texture-modified options. We believe dining is a moment of comfort and community, not just nutrition.",
+    title: "Compassionate Caregivers",
+    desc: "Our experienced team is available 24 hours a day to provide assistance, encouragement, and compassionate support whenever it’s needed.",
+    icon: (
+      <svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+        <circle cx="9" cy="7" r="4" />
+        <path d="M23 21v-2a4 4 0 00-3-3.87" />
+        <path d="M16 3.13a4 4 0 010 7.75" />
+      </svg>
+    ),
+  },
+  {
+    title: "Comfortable Living",
+    desc: "Residents enjoy inviting private or semi-private accommodations designed to provide comfort, privacy, and a true sense of home.",
+    icon: (
+      <svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+        <polyline points="9 22 9 12 15 12 15 22" />
+      </svg>
+    ),
+  },
+  {
+    title: "Nutritious Dining",
+    desc: "Three freshly prepared meals are served daily, along with healthy snacks and menu options that accommodate dietary needs.",
     icon: (
       <svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
         <path d="M18 8h1a4 4 0 010 8h-1" />
@@ -28,22 +46,20 @@ const pillars = [
     ),
   },
   {
-    number: "03",
-    title: "Comfort of Home",
-    subtitle: "Residential, Not Institutional",
-    desc: "Oakridge Manor Living is set in a warm residential neighborhood — not a facility. Enjoy spacious private and semi-private rooms, inviting common areas with comfortable furnishings, and modern amenities including high-speed Wi-Fi, so life here genuinely feels like home.",
+    title: "Engaging Community",
+    desc: "Our residents enjoy a vibrant lifestyle filled with activities, friendships, wellness programs, and opportunities to stay active and connected.",
     icon: (
       <svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
-        <polyline points="9 22 9 12 15 12 15 22" />
+        <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+        <line x1="16" y1="2" x2="16" y2="6" />
+        <line x1="8" y1="2" x2="8" y2="6" />
+        <line x1="3" y1="10" x2="21" y2="10" />
       </svg>
     ),
   },
   {
-    number: "04",
-    title: "Safety & Security",
-    subtitle: "Transparent, Trustworthy Protection",
-    desc: "Our homes are located in secure residential neighborhoods with 24-hour monitoring. Security cameras are in place throughout all common living areas and around the property perimeter. For private rooms, camera installation is entirely optional — residents and families have a clear opt-in/opt-out choice.",
+    title: "Safe Environment",
+    desc: "We provide a secure community where residents can enjoy their independence with confidence, knowing help is always nearby.",
     icon: (
       <svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
@@ -57,59 +73,42 @@ export default function CarePillars() {
     <section className="py-20 px-6" style={{ backgroundColor: "var(--off-white)" }}>
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-14">
-          <p className="section-badge mb-4">Our Care Model</p>
+          <p className="section-badge mb-4">Why Choose Us</p>
           <h2
             className="text-4xl md:text-5xl font-semibold mb-5"
             style={{ fontFamily: "var(--font-playfair), Georgia, serif", color: "var(--navy)" }}
           >
-            Four Pillars of Exceptional Care
+            Why Choose Oakridge Manor Living
           </h2>
-          <p
-            className="max-w-2xl mx-auto text-base leading-relaxed"
-            style={{ fontFamily: "var(--font-open-sans), Arial, sans-serif", color: "var(--text-medium)" }}
-          >
-            Everything we do is built on four core commitments — so families can feel completely confident in their loved one&apos;s daily life and long-term wellbeing.
-          </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {pillars.map((p) => (
             <div
-              key={p.number}
-              className="flex flex-col gap-5 p-8 bg-white rounded"
+              key={p.title}
+              className="flex flex-col gap-4 p-8 bg-white rounded"
               style={{ borderTop: "3px solid var(--gold)" }}
             >
-              <div className="flex items-start justify-between">
-                <div style={{ color: "var(--gold)" }}>{p.icon}</div>
-                <span
-                  className="text-4xl font-semibold leading-none"
-                  style={{ fontFamily: "var(--font-playfair), Georgia, serif", color: "var(--navy)", opacity: 0.12 }}
-                >
-                  {p.number}
-                </span>
-              </div>
-              <div>
-                <p className="section-badge mb-1">{p.subtitle}</p>
-                <h3
-                  className="text-xl font-semibold mb-3"
-                  style={{ fontFamily: "var(--font-playfair), Georgia, serif", color: "var(--navy)" }}
-                >
-                  {p.title}
-                </h3>
-                <p
-                  className="text-sm leading-relaxed"
-                  style={{ fontFamily: "var(--font-open-sans), Arial, sans-serif", color: "var(--text-medium)" }}
-                >
-                  {p.desc}
-                </p>
-              </div>
+              <div style={{ color: "var(--gold)" }}>{p.icon}</div>
+              <h3
+                className="text-xl font-semibold"
+                style={{ fontFamily: "var(--font-playfair), Georgia, serif", color: "var(--navy)" }}
+              >
+                {p.title}
+              </h3>
+              <p
+                className="text-sm leading-relaxed"
+                style={{ fontFamily: "var(--font-open-sans), Arial, sans-serif", color: "var(--text-medium)" }}
+              >
+                {p.desc}
+              </p>
             </div>
           ))}
         </div>
 
         <div className="text-center">
           <Link href="/contact" className="btn-primary">
-            Schedule a Private Tour
+            Contact Us
           </Link>
         </div>
       </div>

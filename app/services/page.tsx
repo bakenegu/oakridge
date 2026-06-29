@@ -3,104 +3,126 @@ import Link from "next/link";
 import PageHeader from "../components/PageHeader";
 import { IMAGES } from "../lib/images";
 
-const sections = [
+const services = [
   {
-    title: "Personalized 24/7 Care",
+    title: "Personal Care Assistance",
+    subtitle: "Personalized Support for Everyday Living",
     image: IMAGES.houseEntrance,
-    badge: "Pillar 1",
-    intro: "Our trained caregivers are on-site around the clock — every hour of every day — providing hands-on assistance tailored to each resident's individual care plan.",
+    intro: "Our goal is to help residents remain as independent as possible while providing the right level of assistance for daily life.",
     items: [
-      "Assistance with bathing and personal hygiene",
-      "Help with dressing and grooming",
-      "Eating assistance and mealtime support",
-      "Toileting and incontinence care",
-      "Mobility assistance and fall prevention",
-      "Medication reminders and management",
-      "24-hour alert monitoring and emergency response",
-      "Nurse-designed, individualized care plans",
+      "Bathing",
+      "Dressing",
+      "Grooming",
+      "Personal hygiene",
+      "Mobility assistance",
+      "Medication reminders",
+      "Toileting assistance",
+      "Daily wellness monitoring",
     ],
   },
   {
-    title: "Meal Services",
+    title: "Housekeeping & Laundry",
+    subtitle: "Maintenance-Free Living",
+    image: IMAGES.bedroom,
+    intro: "Residents can enjoy a maintenance-free lifestyle with professional housekeeping and laundry services.",
+    items: [
+      "Housekeeping services",
+      "Linen service",
+      "Personal laundry",
+      "Room maintenance",
+    ],
+  },
+  {
+    title: "Dining Services",
+    subtitle: "Nutritious & Delicious Meals",
     image: IMAGES.diningRoom,
-    badge: "Pillar 2",
-    intro: "Every meal is thoughtfully prepared to be nutritious, flavorful, and suited to individual dietary requirements — because dining is a moment of comfort, connection, and community.",
+    intro: "Residents enjoy freshly prepared meals in a welcoming, restaurant-style dining experience.",
     items: [
-      "Three home-cooked meals prepared fresh daily",
-      "Menus tailored to individual dietary needs",
-      "Diabetic, low-sodium, and heart-healthy options",
-      "Texture-modified meals for swallowing difficulties",
-      "Nutritional balance reviewed by care staff",
-      "Snacks and hydration available throughout the day",
-      "Communal dining to encourage social engagement",
-      "Family members always welcome to join meals",
+      "Three nutritious meals every day",
+      "Healthy snacks",
+      "Diet accommodations",
+      "Restaurant-style dining experience",
     ],
   },
   {
-    title: "Comfort of Home",
+    title: "Health & Wellness",
+    subtitle: "Focused on Well-Being",
     image: IMAGES.livingRoom,
-    badge: "Pillar 3",
-    intro: "Oakridge Manor Living is a real home in a residential neighborhood — not a facility. We combine the warmth of private-home living with professional-grade care.",
+    intro: "Our wellness-focused approach keeps residents healthy, active, and engaged.",
     items: [
-      "Spacious private and semi-private rooms",
-      "Residents may personalize and furnish their own room",
-      "Inviting shared common areas and living spaces",
-      "High-speed Wi-Fi included throughout",
-      "Quiet, secure residential neighborhood setting",
-      "Housekeeping and laundry services",
-      "Assistance with scheduling appointments",
-      "Pet-friendly environment",
+      "Medication management",
+      "Health monitoring",
+      "Coordination with healthcare providers",
+      "Wellness activities",
+      "Fitness programs",
     ],
   },
   {
-    title: "Safety & Security",
+    title: "Social & Recreational Activities",
+    subtitle: "Stay Active & Connected",
     image: IMAGES.breakfastNook,
-    badge: "Pillar 4",
-    intro: "Families trust us because we are transparent about safety. Our homes are secured, monitored, and staffed to give both residents and families complete peace of mind.",
+    intro: "Every day offers opportunities for fun and connection through a vibrant activities calendar.",
     items: [
-      "24/7 on-site caregiver presence",
-      "Security cameras in all common areas and exterior",
-      "Optional room cameras — clear resident opt-in/opt-out",
-      "Secured entry points and perimeter",
-      "Emergency call systems in all rooms",
-      "Fall prevention protocols and mobility aids",
-      "Fire safety and emergency preparedness plans",
-      "Regular safety assessments by nursing leadership",
+      "Exercise classes",
+      "Arts and crafts",
+      "Music programs",
+      "Movie nights",
+      "Card and board games",
+      "Holiday celebrations",
+      "Educational activities",
+      "Community outings",
+      "Gardening",
+      "Group gatherings",
     ],
   },
+];
+
+const amenities = [
+  "Spacious private and semi-private rooms",
+  "Comfortable common living areas",
+  "Beautiful outdoor spaces",
+  "Walking paths",
+  "Community dining room",
+  "Activity rooms",
+  "Family visiting areas",
+  "Wi-Fi access",
+  "Housekeeping",
+  "Laundry service",
+  "Transportation coordination",
+  "Emergency response systems",
 ];
 
 export default function ServicesPage() {
   return (
     <>
-      <PageHeader title="Services & Care" subtitle="What We Offer — And How We Deliver It" />
+      <PageHeader title="Assisted Living Services" subtitle="Personalized Support for Everyday Living" />
 
       <section className="py-16 px-6" style={{ backgroundColor: "#fff" }}>
         <div className="max-w-3xl mx-auto text-center mb-14">
-          <p className="section-badge mb-4">Our Four-Pillar Care Model</p>
+          <p className="section-badge mb-4">Our Services</p>
           <h2
             className="text-3xl md:text-4xl font-semibold mb-5"
             style={{ fontFamily: "var(--font-playfair), Georgia, serif", color: "var(--navy)" }}
           >
-            Every Service, Built Around Your Loved One
+            Everything You Need to Thrive
           </h2>
           <p
             className="text-base leading-relaxed"
             style={{ fontFamily: "var(--font-open-sans), Arial, sans-serif", color: "var(--text-medium)" }}
           >
-            At Oakridge Manor Living, our services are organized around four core pillars — the same commitments that define who we are and how we care for every resident, every day.
+            At Oakridge Manor Living, our goal is to help residents remain as independent as possible while providing the right level of assistance for daily life.
           </p>
         </div>
 
         <div className="max-w-6xl mx-auto flex flex-col gap-20">
-          {sections.map((sec, i) => (
+          {services.map((sec, i) => (
             <div
               key={sec.title}
               className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start"
             >
               <div
                 className={`relative rounded overflow-hidden ${i % 2 === 1 ? "lg:order-2" : ""}`}
-                style={{ minHeight: "380px" }}
+                style={{ minHeight: "360px" }}
               >
                 <Image
                   src={sec.image}
@@ -111,7 +133,7 @@ export default function ServicesPage() {
                 />
               </div>
               <div className={i % 2 === 1 ? "lg:order-1" : ""}>
-                <p className="section-badge mb-2">{sec.badge}</p>
+                <p className="section-badge mb-2">{sec.subtitle}</p>
                 <h3
                   className="text-2xl md:text-3xl font-semibold mb-4"
                   style={{ fontFamily: "var(--font-playfair), Georgia, serif", color: "var(--navy)" }}
@@ -144,28 +166,58 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* Amenities */}
+      <section className="py-16 px-6" style={{ backgroundColor: "var(--off-white)" }}>
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <p className="section-badge mb-4">Amenities</p>
+            <h2
+              className="text-3xl md:text-4xl font-semibold mb-4"
+              style={{ fontFamily: "var(--font-playfair), Georgia, serif", color: "var(--navy)" }}
+            >
+              Everything You Need to Feel at Home
+            </h2>
+            <p
+              className="text-base leading-relaxed max-w-2xl mx-auto"
+              style={{ fontFamily: "var(--font-open-sans), Arial, sans-serif", color: "var(--text-medium)" }}
+            >
+              Oakridge Manor Living offers thoughtfully designed amenities that support both comfort and convenience.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5">
+            {amenities.map((item) => (
+              <div
+                key={item}
+                className="flex items-center gap-3 p-4 bg-white rounded"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ color: "var(--gold)", flexShrink: 0 }}>
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                <span
+                  className="text-sm"
+                  style={{ fontFamily: "var(--font-open-sans), Arial, sans-serif", color: "var(--text-medium)" }}
+                >
+                  {item}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
       <section className="py-16 px-6 text-center" style={{ backgroundColor: "var(--navy)" }}>
-        <p
-          className="text-white/70 text-xs uppercase tracking-[0.3em] font-semibold mb-4"
-          style={{ fontFamily: "var(--font-open-sans), Arial, sans-serif" }}
-        >
-          See It in Person
-        </p>
         <h2 className="text-3xl font-semibold text-white mb-4" style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}>
-          Experience Our Standard of Care Firsthand
+          Experience the Oakridge Manor Living Difference
         </h2>
-        <p className="text-white/70 mb-8 max-w-xl mx-auto text-sm" style={{ fontFamily: "var(--font-open-sans), Arial, sans-serif" }}>
-          A private tour is worth a thousand words. Walk the home, meet the caregivers, and understand why families across Plano choose Oakridge Manor Living.
+        <p className="text-white/70 mb-8 max-w-xl mx-auto text-sm leading-relaxed" style={{ fontFamily: "var(--font-open-sans), Arial, sans-serif" }}>
+          Discover a welcoming assisted living community where compassionate care, personalized support, and meaningful connections come together.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Link href="/contact" className="btn-gold">Schedule a Private Tour</Link>
-          <a
-            href="tel:+15125550100"
-            className="text-white/80 text-sm font-semibold uppercase tracking-widest hover:text-white transition-colors"
-            style={{ fontFamily: "var(--font-open-sans), Arial, sans-serif" }}
-          >
-            Call (512) 555-0100
-          </a>
+          <Link href="/contact" className="btn-gold">Schedule a Tour</Link>
+          <Link href="/contact" className="btn-outline-dark" style={{ color: "#fff", borderColor: "rgba(255,255,255,0.4)" }}>
+            Contact Us
+          </Link>
         </div>
       </section>
     </>

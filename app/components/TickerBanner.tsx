@@ -1,5 +1,5 @@
 const SEGMENT =
-  "   ★  Schedule a private tour today to see why families trust Oakridge Manor Living in Plano, TX   ★  Nurse-led, 24/7 hands-on residential care   ★  Call us: (512) 555-0100   ★  Limited rooms available — reserve yours today";
+  "   ★  Schedule a tour today to see why families trust Oakridge Manor Living in Plano, TX   ★  Compassionate assisted living with 24/7 support   ★  Call us: (512) 555-0100   ★  Where comfort, dignity, and care feel like home";
 
 export default function TickerBanner() {
   const items = Array.from({ length: 4 }, (_, i) => (

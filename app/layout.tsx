@@ -18,9 +18,9 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Oakridge Manor Living | Nurse-Led Residential Care Home in Plano, TX",
+  title: "Oakridge Manor Living | Compassionate Assisted Living Community",
   description:
-    "Oakridge Manor Living is a nurse-led, Type B residential care home in Plano, TX offering 24/7 personalized care. Spacious private rooms, nutritious meals, and transparent safety. Schedule a private tour at 2421 London Dr.",
+    "Oakridge Manor Living offers compassionate assisted living with personalized care, 24/7 support, nutritious dining, engaging activities, and a welcoming community where seniors can thrive with comfort, dignity, and independence.",
 };
 
 export default function RootLayout({

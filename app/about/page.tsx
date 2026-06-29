@@ -3,40 +3,19 @@ import Link from "next/link";
 import PageHeader from "../components/PageHeader";
 import { IMAGES } from "../lib/images";
 
-const values = [
-  {
-    title: "Clinical Excellence",
-    desc: "Nurse-designed care protocols ensure medical best practices are embedded in every resident's daily routine — not just in emergencies.",
-  },
-  {
-    title: "Dignity First",
-    desc: "Every resident is treated as a whole person. We honor individual preferences, histories, and routines in everything we do.",
-  },
-  {
-    title: "Transparent Communication",
-    desc: "Families receive regular updates, are always welcome to visit, and can reach our care team directly — day or night.",
-  },
-  {
-    title: "Continuous Improvement",
-    desc: "We hold regular staff training, clinical reviews, and family feedback sessions to continuously raise our standard of care.",
-  },
+const whyChoose = [
+  { title: "Personalized Care", desc: "Every resident receives an individualized care plan tailored to their health, daily routines, and personal preferences." },
+  { title: "Compassionate Caregivers", desc: "Our experienced team is available 24 hours a day to provide assistance, encouragement, and compassionate support whenever it's needed." },
+  { title: "Comfortable Living", desc: "Residents enjoy inviting private or semi-private accommodations designed to provide comfort, privacy, and a true sense of home." },
+  { title: "Nutritious Dining", desc: "Three freshly prepared meals are served daily, along with healthy snacks and menu options that accommodate dietary needs." },
+  { title: "Engaging Community", desc: "Our residents enjoy a vibrant lifestyle filled with activities, friendships, wellness programs, and opportunities to stay active and connected." },
+  { title: "Safe Environment", desc: "We provide a secure community where residents can enjoy their independence with confidence, knowing help is always nearby." },
 ];
 
-const team = [
-  {
-    name: "Margaret Osei-Bonsu, RN",
-    role: "Founder & Director of Care",
-    image: IMAGES.houseEntrance,
-    bio: "Margaret is a Registered Nurse with over 18 years of clinical experience spanning medical-surgical care, case management, and long-term care coordination. After witnessing firsthand the gap between institutional facility care and what seniors truly deserve, she founded Oakridge Manor Living to build the kind of home she would trust for her own family. Margaret holds certifications in gerontological nursing and oversees all clinical care protocols, staff training, and resident care plans personally.",
-    credentials: ["Registered Nurse (RN)", "Gerontological Nursing Certification", "18+ Years Clinical Experience", "Medical-Surgical & Case Management Background"],
-  },
-  {
-    name: "James Osei-Bonsu, MBA",
-    role: "Co-Founder & Operations Director",
-    image: IMAGES.breakfastNook,
-    bio: "James brings expertise in healthcare administration and residential facility operations. With a background in healthcare management and a deep commitment to family-centered care, he ensures that Oakridge Manor's day-to-day operations match the high clinical standards set by our nursing leadership.",
-    credentials: ["MBA, Healthcare Administration", "Residential Care Operations", "10+ Years in Senior Living Management"],
-  },
+const testimonials = [
+  "Oakridge Manor Living has been an incredible place for our father. The staff genuinely care, and the community feels like family.",
+  "The caregivers are compassionate, attentive, and always willing to help. We couldn't be happier with our decision.",
+  "Our loved one has become more active, more social, and truly enjoys living here.",
 ];
 
 export default function AboutPage() {
@@ -44,148 +23,88 @@ export default function AboutPage() {
     <>
       <PageHeader
         title="About Oakridge Manor Living"
-        subtitle="Nurse-Led. Family-Centered. Clinically Trusted."
+        subtitle="Compassionate Care. Comfortable Living."
         image="houseExterior"
       />
 
-      {/* Mission statement */}
+      {/* Welcome */}
       <section className="py-20 px-6" style={{ backgroundColor: "#ffffff" }}>
         <div className="max-w-3xl mx-auto text-center">
-          <p className="section-badge mb-5">Our Mission</p>
+          <p className="section-badge mb-5">Welcome</p>
           <h2
             className="text-4xl md:text-5xl font-semibold leading-tight mb-8"
             style={{ fontFamily: "var(--font-playfair), Georgia, serif", color: "var(--navy)" }}
           >
-            Clinical Care That Feels Like Home
+            Welcome to Oakridge Manor Living
           </h2>
           <p
             className="text-base leading-relaxed mb-5"
             style={{ fontFamily: "var(--font-open-sans), Arial, sans-serif", color: "var(--text-medium)" }}
           >
-            Oakridge Manor Living was founded on a single conviction: seniors who need higher-acuity care deserve to receive it in an environment that is warm, residential, and deeply human — not institutional. We are a Type B licensed residential care home in Plano, TX, led by a Registered Nurse with nearly two decades of clinical experience.
+            At Oakridge Manor Living, we believe assisted living should be more than just receiving care — it should be about enjoying life in a supportive, engaging, and comfortable environment.
           </p>
           <p
-            className="text-base leading-relaxed mb-10"
+            className="text-base leading-relaxed mb-5"
             style={{ fontFamily: "var(--font-open-sans), Arial, sans-serif", color: "var(--text-medium)" }}
           >
-            Our low resident-to-caregiver ratio, nurse-designed care protocols, and 24-hour alert monitoring mean families can trust that their loved one receives attentive, medically sound care every single hour of every day — in a place that genuinely feels like home.
+            Our community is thoughtfully designed for older adults who value their independence but appreciate having compassionate assistance available whenever they need it. From personalized care plans to engaging daily activities and nutritious meals, every aspect of our community is focused on enhancing quality of life.
           </p>
-          <Link href="/contact" className="btn-primary">
-            Schedule a Private Tour
-          </Link>
+          <p
+            className="text-base leading-relaxed"
+            style={{ fontFamily: "var(--font-open-sans), Arial, sans-serif", color: "var(--text-medium)" }}
+          >
+            We take pride in creating meaningful relationships with our residents and their families, providing care that respects each person&apos;s unique needs, preferences, and lifestyle.
+          </p>
         </div>
       </section>
 
-      {/* Leadership team */}
+      {/* Mission */}
       <section className="py-20 px-6" style={{ backgroundColor: "var(--off-white)" }}>
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-14">
-            <p className="section-badge mb-4">Healthcare Leadership</p>
+        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="relative rounded overflow-hidden" style={{ height: "400px" }}>
+            <Image
+              src={IMAGES.commonArea}
+              alt="Comfortable common area at Oakridge Manor Living"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
+          </div>
+          <div>
+            <p className="section-badge mb-4">Our Mission</p>
             <h2
-              className="text-4xl md:text-5xl font-semibold"
+              className="text-3xl md:text-4xl font-semibold mb-5"
               style={{ fontFamily: "var(--font-playfair), Georgia, serif", color: "var(--navy)" }}
             >
-              Meet the People Behind the Care
+              Caring with Compassion. Living with Dignity.
             </h2>
             <p
-              className="max-w-2xl mx-auto mt-5 text-base leading-relaxed"
+              className="text-base leading-relaxed mb-8"
               style={{ fontFamily: "var(--font-open-sans), Arial, sans-serif", color: "var(--text-medium)" }}
             >
-              Our leadership team combines frontline clinical experience with operational excellence — so both the quality of care and the quality of life are always high.
+              Our mission is to provide exceptional assisted living services that promote independence, dignity, and well-being while creating a safe and welcoming environment where every resident feels valued and at home.
             </p>
-          </div>
-
-          <div className="flex flex-col gap-16">
-            {team.map((member, i) => (
-              <div
-                key={member.name}
-                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-start ${i % 2 !== 0 ? "lg:direction-rtl" : ""}`}
-              >
-                {/* Photo */}
-                <div
-                  className={`relative rounded overflow-hidden ${i % 2 !== 0 ? "lg:order-2" : ""}`}
-                  style={{ height: "420px" }}
-                >
-                  <Image
-                    src={member.image}
-                    alt={`${member.name} — ${member.role}`}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 1024px) 100vw, 50vw"
-                  />
-                  <div
-                    className="absolute bottom-0 left-0 right-0 p-5"
-                    style={{ background: "linear-gradient(to top, rgba(27,42,74,0.9) 0%, transparent 100%)" }}
-                  >
-                    <p
-                      className="text-white font-semibold text-lg"
-                      style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
-                    >
-                      {member.name}
-                    </p>
-                    <p className="text-white/70 text-sm" style={{ fontFamily: "var(--font-open-sans), Arial, sans-serif" }}>
-                      {member.role}
-                    </p>
-                  </div>
-                </div>
-
-                {/* Bio */}
-                <div className={i % 2 !== 0 ? "lg:order-1" : ""}>
-                  <p className="section-badge mb-3">{member.role}</p>
-                  <h3
-                    className="text-3xl font-semibold mb-5"
-                    style={{ fontFamily: "var(--font-playfair), Georgia, serif", color: "var(--navy)" }}
-                  >
-                    {member.name}
-                  </h3>
-                  <p
-                    className="text-base leading-relaxed mb-7"
-                    style={{ fontFamily: "var(--font-open-sans), Arial, sans-serif", color: "var(--text-medium)" }}
-                  >
-                    {member.bio}
-                  </p>
-
-                  <div className="flex flex-col gap-2">
-                    {member.credentials.map((cred) => (
-                      <div key={cred} className="flex items-center gap-3">
-                        <div
-                          className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0"
-                          style={{ backgroundColor: "var(--gold)" }}
-                        >
-                          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-                            <polyline points="20 6 9 17 4 12" />
-                          </svg>
-                        </div>
-                        <span
-                          className="text-sm font-semibold"
-                          style={{ fontFamily: "var(--font-open-sans), Arial, sans-serif", color: "var(--navy)" }}
-                        >
-                          {cred}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
+            <Link href="/contact" className="btn-primary">
+              Contact Us
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* Core values */}
+      {/* Why Choose */}
       <section className="py-20 px-6" style={{ backgroundColor: "#ffffff" }}>
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <p className="section-badge mb-4">What We Stand For</p>
+            <p className="section-badge mb-4">Our Promise</p>
             <h2
               className="text-4xl font-semibold"
               style={{ fontFamily: "var(--font-playfair), Georgia, serif", color: "var(--navy)" }}
             >
-              Our Core Values
+              Why Choose Oakridge Manor Living
             </h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((v) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {whyChoose.map((v) => (
               <div
                 key={v.title}
                 className="p-7 rounded flex flex-col gap-3"
@@ -209,40 +128,126 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Resident Lifestyle */}
+      <section className="py-20 px-6" style={{ backgroundColor: "var(--off-white)" }}>
+        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <p className="section-badge mb-4">Resident Lifestyle</p>
+            <h2
+              className="text-3xl md:text-4xl font-semibold mb-5"
+              style={{ fontFamily: "var(--font-playfair), Georgia, serif", color: "var(--navy)" }}
+            >
+              Live Independently with Confidence
+            </h2>
+            <p
+              className="text-base leading-relaxed mb-5"
+              style={{ fontFamily: "var(--font-open-sans), Arial, sans-serif", color: "var(--text-medium)" }}
+            >
+              At Oakridge Manor Living, residents enjoy the freedom to spend each day their way while receiving personalized support whenever needed.
+            </p>
+            <p
+              className="text-base leading-relaxed"
+              style={{ fontFamily: "var(--font-open-sans), Arial, sans-serif", color: "var(--text-medium)" }}
+            >
+              Whether participating in community activities, relaxing with friends, enjoying hobbies, or spending time with family, our residents experience a lifestyle built around comfort, connection, and well-being.
+            </p>
+          </div>
+          <div className="relative rounded overflow-hidden" style={{ height: "400px" }}>
+            <Image
+              src={IMAGES.livingRoom}
+              alt="Living room at Oakridge Manor"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Family Support */}
+      <section className="py-20 px-6" style={{ backgroundColor: "#ffffff" }}>
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="section-badge mb-5">Family Support</p>
+          <h2
+            className="text-3xl md:text-4xl font-semibold mb-6"
+            style={{ fontFamily: "var(--font-playfair), Georgia, serif", color: "var(--navy)" }}
+          >
+            Peace of Mind for Families
+          </h2>
+          <p
+            className="text-base leading-relaxed mb-5"
+            style={{ fontFamily: "var(--font-open-sans), Arial, sans-serif", color: "var(--text-medium)" }}
+          >
+            Choosing an assisted living community is an important decision, and we understand the trust families place in us.
+          </p>
+          <p
+            className="text-base leading-relaxed"
+            style={{ fontFamily: "var(--font-open-sans), Arial, sans-serif", color: "var(--text-medium)" }}
+          >
+            We believe in open communication, compassionate care, and building lasting relationships with both residents and their loved ones. Families can feel confident knowing their loved one is receiving attentive, respectful, and professional care every day.
+          </p>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-20 px-6" style={{ backgroundColor: "var(--off-white)" }}>
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <p className="section-badge mb-4">Testimonials</p>
+            <h2
+              className="text-3xl md:text-4xl font-semibold"
+              style={{ fontFamily: "var(--font-playfair), Georgia, serif", color: "var(--navy)" }}
+            >
+              What Families Are Saying
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((quote, i) => (
+              <div
+                key={i}
+                className="p-8 bg-white rounded flex flex-col gap-4"
+                style={{ borderLeft: "3px solid var(--gold)" }}
+              >
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" style={{ color: "var(--gold)" }}>
+                  <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z" fill="currentColor" />
+                  <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z" fill="currentColor" />
+                </svg>
+                <p
+                  className="text-sm leading-relaxed italic"
+                  style={{ fontFamily: "var(--font-open-sans), Arial, sans-serif", color: "var(--text-medium)" }}
+                >
+                  {quote}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section
         className="py-16 px-6 text-center"
         style={{ backgroundColor: "var(--navy)" }}
       >
-        <p
-          className="text-white/70 text-xs uppercase tracking-[0.3em] font-semibold mb-4"
-          style={{ fontFamily: "var(--font-open-sans), Arial, sans-serif" }}
-        >
-          Take the Next Step
-        </p>
         <h2
           className="text-3xl md:text-4xl font-semibold text-white mb-5"
           style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
         >
-          Come See the Oakridge Manor Difference
+          Experience the Oakridge Manor Living Difference
         </h2>
         <p
           className="text-white/70 text-base max-w-xl mx-auto mb-8 leading-relaxed"
           style={{ fontFamily: "var(--font-open-sans), Arial, sans-serif" }}
         >
-          A private tour is worth a thousand words. Meet our team, walk the home, and see for yourself what nurse-led residential care truly looks like.
+          Whether you&apos;re exploring options for yourself or someone you love, we&apos;re here to answer your questions and help you make an informed decision.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Link href="/contact" className="btn-gold">
-            Schedule a Private Tour
+            Schedule a Tour
           </Link>
-          <a
-            href="tel:+15125550100"
-            className="text-white/80 text-sm font-semibold uppercase tracking-widest hover:text-white transition-colors"
-            style={{ fontFamily: "var(--font-open-sans), Arial, sans-serif" }}
-          >
-            Call (512) 555-0100
-          </a>
+          <Link href="/contact" className="btn-outline-dark" style={{ color: "#fff", borderColor: "rgba(255,255,255,0.4)" }}>
+            Contact Us
+          </Link>
         </div>
       </section>
     </>
