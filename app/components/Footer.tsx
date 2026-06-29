@@ -33,7 +33,7 @@ export default function Footer() {
             <div className="mb-5">
               <Image
                 src="/LOGO1.png"
-                alt="Oakridge Manor Assisted Living"
+                alt="Oakridge Manor Living"
                 width={200}
                 height={90}
                 style={{ objectFit: "contain", objectPosition: "left center" }}
@@ -96,7 +96,7 @@ export default function Footer() {
             className="text-white/40 text-xs"
             style={{ fontFamily: "var(--font-open-sans), Arial, sans-serif" }}
           >
-            &copy; {new Date().getFullYear()} Oakridge Manor Assisted Living. All rights reserved.
+            &copy; {new Date().getFullYear()} Oakridge Manor Living. All rights reserved.
           </p>
           <p
             className="text-white/40 text-xs italic"

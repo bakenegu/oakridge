@@ -40,7 +40,7 @@ export default function Navbar() {
         <Link href="/" className="flex-shrink-0">
           <Image
             src="/LOGO1.png"
-            alt="Oakridge Manor Assisted Living"
+            alt="Oakridge Manor Living"
             width={160}
             height={44}
             style={{ objectFit: "contain", objectPosition: "left center" }}
