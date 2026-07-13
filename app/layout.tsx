@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Open_Sans } from "next/font/google";
 import Navbar from "./components/Navbar";
-import TickerBanner from "./components/TickerBanner";
 import Footer from "./components/Footer";
 import "./globals.css";
 
@@ -32,7 +31,6 @@ export default function RootLayout({
     <html lang="en" className={`${playfair.variable} ${openSans.variable}`}>
       <body className="flex flex-col min-h-screen">
         <Navbar />
-        <TickerBanner />
         <main className="flex flex-col flex-1">{children}</main>
         <Footer />
       </body>

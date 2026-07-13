@@ -1,108 +1,74 @@
-import Link from "next/link";
-import Image from "next/image";
-
-const footerLinks = {
-  "Our Care": [
-    { label: "24/7 Personalized Care", href: "/services" },
-    { label: "Meal Services", href: "/services" },
-    { label: "Safety & Security", href: "/services" },
-    { label: "Comfort of Home", href: "/services" },
-  ],
-  "About Us": [
-    { label: "Our Story", href: "/about" },
-    { label: "Care Leadership", href: "/about" },
-    { label: "Photo Gallery", href: "/gallery" },
-    { label: "Contact Us", href: "/contact" },
-  ],
-  Connect: [
-    { label: "Schedule a Tour", href: "/contact" },
-    { label: "Call (512) 555-0100", href: "tel:+15125550100" },
-    { label: "Careers", href: "/careers" },
-    { label: "Privacy Policy", href: "/privacy" },
-  ],
-};
-
 export default function Footer() {
   return (
     <footer style={{ backgroundColor: "var(--navy)" }}>
-      {/* Main footer content */}
-      <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
-          {/* Logo / about col */}
-          <div className="lg:col-span-2">
-            <div className="mb-5">
-              <Image
-                src="/LOGO1.png"
-                alt="Oakridge Manor Living"
-                width={200}
-                height={90}
-                style={{ objectFit: "contain", objectPosition: "left center" }}
-              />
-            </div>
-
-            <p
-              className="text-white/60 text-sm leading-relaxed mb-5"
-              style={{ fontFamily: "var(--font-open-sans), Arial, sans-serif" }}
-            >
-              Providing compassionate assisted living where comfort, dignity, and personalized care come together to help every resident enjoy life to the fullest.
-            </p>
-
-            <address
-              className="not-italic"
-              style={{ fontFamily: "var(--font-open-sans), Arial, sans-serif" }}
-            >
-              <p className="text-white/60 text-sm">2421 London Dr</p>
-              <p className="text-white/60 text-sm mb-3">Plano, TX 75025</p>
-              <a
-                href="tel:+15125550100"
-                className="text-white/80 hover:text-white text-sm transition-colors font-semibold"
+      <div className="max-w-7xl mx-auto px-6 py-10">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
+          {/* Logo + address */}
+          <div className="flex items-center gap-4 text-center lg:text-left">
+            <svg width="46" height="46" viewBox="0 0 24 24" fill="var(--green)" className="flex-shrink-0">
+              <path d="M12 2a6 6 0 00-6 6c0 .6.1 1.2.3 1.7A5 5 0 003 14a5 5 0 005 5h3v3h2v-3h3a5 5 0 005-5 5 5 0 00-3.3-4.3c.2-.5.3-1.1.3-1.7a6 6 0 00-6-6z" />
+            </svg>
+            <div style={{ fontFamily: "var(--font-open-sans), Arial, sans-serif" }}>
+              <p
+                className="text-white text-lg font-semibold"
+                style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
               >
-                (512) 555-0100
-              </a>
-            </address>
+                Oakridge Manor Living
+              </p>
+              <p className="text-white/60 text-sm">2421 London Dr, Plano, TX 75025</p>
+            </div>
           </div>
 
-          {/* Link columns */}
-          {Object.entries(footerLinks).map(([heading, links]) => (
-            <div key={heading}>
-              <h4
-                className="text-white text-xs uppercase tracking-[0.2em] font-semibold mb-5"
-                style={{ fontFamily: "var(--font-open-sans), Arial, sans-serif" }}
-              >
-                {heading}
-              </h4>
-              <ul className="flex flex-col gap-3">
-                {links.map((link) => (
-                  <li key={link.label}>
-                    <Link
-                      href={link.href}
-                      className="text-white/55 hover:text-white text-sm transition-colors"
-                      style={{ fontFamily: "var(--font-open-sans), Arial, sans-serif" }}
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </div>
+          {/* Contact row */}
+          <div className="flex flex-col sm:flex-row items-center gap-6">
+            <a
+              href="tel:+14695550123"
+              className="flex items-center gap-2 text-white/80 hover:text-white transition-colors text-sm"
+              style={{ fontFamily: "var(--font-open-sans), Arial, sans-serif" }}
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--green)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.72A2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.15a16 16 0 006.29 6.29l1.51-1.52a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+              </svg>
+              (469) 555-0123
+            </a>
 
-      {/* Bottom bar */}
-      <div className="border-t" style={{ borderColor: "rgba(255,255,255,0.1)" }}>
-        <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <span className="hidden sm:block w-px h-5" style={{ backgroundColor: "rgba(255,255,255,0.15)" }} />
+
+            <a
+              href="mailto:info@oakridgemanor.com"
+              className="flex items-center gap-2 text-white/80 hover:text-white transition-colors text-sm"
+              style={{ fontFamily: "var(--font-open-sans), Arial, sans-serif" }}
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--green)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="2" y="4" width="20" height="16" rx="2" />
+                <path d="M22 6l-10 7L2 6" />
+              </svg>
+              info@oakridgemanor.com
+            </a>
+
+            <a
+              href="#"
+              aria-label="Facebook"
+              className="w-9 h-9 rounded-full flex items-center justify-center transition-colors"
+              style={{ backgroundColor: "var(--green)" }}
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        {/* Divider + tagline */}
+        <div className="mt-8 pt-6 border-t text-center" style={{ borderColor: "rgba(255,255,255,0.1)" }}>
+          <p className="serif-italic text-base" style={{ color: "var(--green-light)" }}>
+            Compassion. Dignity. Respect. That&apos;s the Oakridge Way.
+          </p>
           <p
-            className="text-white/40 text-xs"
+            className="text-white/40 text-xs mt-3"
             style={{ fontFamily: "var(--font-open-sans), Arial, sans-serif" }}
           >
             &copy; {new Date().getFullYear()} Oakridge Manor Living. All rights reserved.
-          </p>
-          <p
-            className="text-white/40 text-xs italic"
-            style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
-          >
-            Where Comfort, Dignity, and Care Feel Like Home.
           </p>
         </div>
       </div>

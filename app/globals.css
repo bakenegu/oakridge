@@ -1,22 +1,32 @@
 @import "tailwindcss";
 
 :root {
-  --navy: #1b2a4a;
-  --navy-light: #243660;
-  --gold: #b8914e;
-  --gold-light: #d4a96a;
-  --off-white: #f8f7f4;
+  --navy: #14294a;
+  --navy-dark: #0e1f3a;
+  --navy-light: #1d3559;
+  --green: #7fb241;
+  --green-dark: #6a9a34;
+  --green-light: #9ac95c;
+  --cream: #f4f1e8;
+  --cream-dark: #ece7d8;
   --text-dark: #2c2c2c;
   --text-medium: #555555;
   --text-light: #888888;
+
+  /* Backward-compatible aliases (old gold theme → new green theme) */
+  --gold: var(--green-dark);
+  --gold-light: var(--green-light);
+  --off-white: var(--cream);
 }
 
 @theme inline {
   --color-navy: var(--navy);
+  --color-navy-dark: var(--navy-dark);
   --color-navy-light: var(--navy-light);
-  --color-gold: var(--gold);
-  --color-gold-light: var(--gold-light);
-  --color-off-white: var(--off-white);
+  --color-green: var(--green);
+  --color-green-dark: var(--green-dark);
+  --color-green-light: var(--green-light);
+  --color-cream: var(--cream);
   --font-serif: var(--font-playfair);
   --font-sans: var(--font-open-sans);
 }
@@ -34,79 +44,97 @@ h1, h2, h3, h4 {
 .section-badge {
   font-family: var(--font-open-sans), Arial, sans-serif;
   font-size: 0.75rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--green-dark);
 }
 
+/* Green solid CTA */
 .btn-primary {
-  display: inline-block;
-  background-color: var(--navy);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--green);
   color: #fff;
   font-family: var(--font-open-sans), Arial, sans-serif;
-  font-size: 0.75rem;
+  font-size: 0.78rem;
   font-weight: 700;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  padding: 0.875rem 2rem;
+  padding: 0.95rem 2rem;
+  border-radius: 4px;
   transition: background-color 0.25s ease;
 }
-
 .btn-primary:hover {
-  background-color: var(--navy-light);
+  background-color: var(--green-dark);
 }
 
-.btn-gold {
-  display: inline-block;
+/* Outlined light CTA (for dark backgrounds) */
+.btn-outline-light {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   background-color: transparent;
   color: #fff;
-  border: 1px solid var(--gold);
+  border: 1.5px solid rgba(255, 255, 255, 0.6);
   font-family: var(--font-open-sans), Arial, sans-serif;
-  font-size: 0.75rem;
+  font-size: 0.78rem;
   font-weight: 700;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  padding: 0.875rem 2rem;
-  transition: background-color 0.25s ease, color 0.25s ease;
+  padding: 0.95rem 2rem;
+  border-radius: 4px;
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+.btn-outline-light:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: #fff;
 }
 
-.btn-gold:hover {
-  background-color: var(--gold);
-  color: #fff;
-}
-
+/* Outlined dark CTA (for light backgrounds) */
 .btn-outline-dark {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   background-color: transparent;
   color: var(--navy);
-  border: 1px solid var(--navy);
+  border: 1.5px solid var(--navy);
   font-family: var(--font-open-sans), Arial, sans-serif;
-  font-size: 0.75rem;
+  font-size: 0.78rem;
   font-weight: 700;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  padding: 0.875rem 2rem;
+  padding: 0.95rem 2rem;
+  border-radius: 4px;
   transition: background-color 0.25s ease, color 0.25s ease;
 }
-
 .btn-outline-dark:hover {
   background-color: var(--navy);
   color: #fff;
 }
 
-@keyframes ticker-scroll {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+.serif-italic {
+  font-family: var(--font-playfair), Georgia, serif;
+  font-style: italic;
 }
 
-.ticker-track {
-  display: flex;
-  white-space: nowrap;
-  animation: ticker-scroll 36s linear infinite;
-  will-change: transform;
+/* Legacy gold button → solid green (used on inner-page CTAs) */
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--green);
+  color: #fff;
+  font-family: var(--font-open-sans), Arial, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.95rem 2rem;
+  border-radius: 4px;
+  transition: background-color 0.25s ease;
 }
-
-.ticker-track:hover {
-  animation-play-state: paused;
+.btn-gold:hover {
+  background-color: var(--green-dark);
 }
