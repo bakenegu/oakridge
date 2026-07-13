@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function LocationSection() {
   return (
-    <section className="py-20 px-6" style={{ backgroundColor: "var(--off-white)" }}>
+    <section className="py-20 px-6" style={{ backgroundColor: "#ffffff" }}>
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Text */}
         <div>
@@ -51,7 +51,7 @@ export default function LocationSection() {
         </div>
 
         {/* Google Maps embed */}
-        <div className="overflow-hidden rounded shadow-sm" style={{ height: "420px" }}>
+        <div className="overflow-hidden rounded-lg shadow-lg" style={{ height: "420px", border: "3px solid var(--green)" }}>
           <iframe
             title="Oakridge Manor Living location map"
             src="https://maps.google.com/maps?q=2421+London+Dr,+Plano,+TX+75025&t=&z=15&ie=UTF8&iwloc=&output=embed"
